@@ -31,9 +31,12 @@ include_once('commun.inc.php');
             <tr>
                 <th>Auteurs</th>
             </tr>
-            <?php foreach ($auteurs as $numero => $auteur) : ?>
-                <h2><?= $auteur ?></h2>
-            <?php endforeach ?>
+     
+            <?php foreach ($auteurs as $numero => $auteur){
+               // href = '  ' ---> href=  \" ..... \"
+               // etape 1:commencer par écrire un script PHP qui affiche la liste des auteurs
+                echo "<tr><td><a href=\"auteur.php?numero=$numero\"> $auteur</a></td></tr>";}
+            ?>
         </table>
     </div>
 </body>
